@@ -28,9 +28,14 @@ After installing Docker, clone this repo and in the main folder run:
 ```
 docker compose up -d
 ```
+
+**Note:** If you are having troubles with `docker compose` try `docker-compose` instead.
+
 This will spawn the running container in the background. When you then make changes to the code in the folder you will see the changes being reflected at `localhost:8080`.
 
 To de-spawn the environment and remove the running containers execute:
 ```
 docker compose down
 ```
+
+Again, if there are issues with `docker compose` try `docker-compose`.

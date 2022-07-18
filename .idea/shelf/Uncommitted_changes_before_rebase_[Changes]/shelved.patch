@@ -1,0 +1,19 @@
+Index: src/server.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import os\r\nfrom flask import Flask, request\r\n\r\nserver = Flask(__name__)\r\n\r\n@server.route(\"/\")\r\ndef hello():\r\n  return \"Hello World!\"\r\n\r\n@server.route(\"/hello\")\r\ndef personalised_hello():\r\n  username = request.args.get('user')\r\n  return f'Hello {username}!'\r\n\r\nif __name__ == \"__main__\":\r\n   server_port = os.environ['FLASK_PORT']\r\n   server.run(host='0.0.0.0', port=server_port, debug=True)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/server.py b/src/server.py
+--- a/src/server.py	(revision 4f5f26ec2aee2a69ad231186fbe3c00a3ac6039d)
++++ b/src/server.py	(date 1657698500230)
+@@ -5,7 +5,7 @@
+ 
+ @server.route("/")
+ def hello():
+-  return "Hello World!"
++  return "Hello Mariya!"
+ 
+ @server.route("/hello")
+ def personalised_hello():
